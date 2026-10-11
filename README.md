@@ -2,7 +2,7 @@
 
 Implementation, experiment records and analysis code for the paper
 
-> **N-LDF: A Controlled Evaluation of Class-Size-Normalized Local Support Across Oversampling Amounts, Mechanisms, and Decision Thresholds** (revised for *Machine Learning*)
+> **N-LDF: A Controlled Evaluation of Class-Size-Normalized Local Support Across Oversampling Amounts, Mechanisms, and Decision Thresholds** (submitted to *Machine Learning* https://link.springer.com/journal/10994 )
 > Ahmad Ilham, Mustafa Mat Deris, Deshinta Arrova Dewi
 
 Every number, table and figure in the paper is regenerated from the files in
