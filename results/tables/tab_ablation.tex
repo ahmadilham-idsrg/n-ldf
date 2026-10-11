@@ -1,0 +1,27 @@
+\begin{table}[htbp]
+\caption{Ablation of the N-LDF pipeline: each variant changes one element of the archived configuration}
+\label{tab:ablation}
+\centering
+\tabsmall
+\setlength{\tabcolsep}{1.6pt}
+\begin{tabular}{lcccccccc}
+\toprule
+\textbf{Variant} & \textbf{F1} & \hd{$\Delta$\textbf{F1}}{} & \hd{\textbf{Source}}{\textbf{Holm $p$}} & \hd{\textbf{Task}}{\textbf{Holm $p$}} & \hd{$\Delta$\textbf{Rec.}}{} & \hd{$\Delta$\textbf{Spec.}}{} & \hd{$\Delta$\textbf{AUPRC}}{} & \hd{\textbf{Realized}}{\textbf{ratio}} \\
+\midrule
+\textit{N-LDF (archived)} & 0.5821 & & & & & & & 0.714 \\
+$\lambda_p=0$ (raw sums) & 0.5560 & $-0.0261$ & 0.007 & $4.5\times10^{-5}$ & $-0.053$ & $+0.010$ & $-0.0065$ & 0.607 \\
+$\lambda_p=1$ & 0.5811 & $-0.0011$ & 1.00 & 1.00 & $+0.003$ & $-0.001$ & $-0.0012$ & 0.714 \\
+local proportion & 0.5539 & $-0.0283$ & 0.02 & $1.1\times10^{-4}$ & $-0.056$ & $+0.010$ & $-0.0067$ & 0.605 \\
+unguided generation & 0.5906 & $+0.0085$ & 1.00 & 1.00 & $+0.052$ & $-0.012$ & $-0.0010$ & 0.714 \\
+no perturbation & 0.5818 & $-0.0003$ & 1.00 & 1.00 & $+0.002$ & $-0.001$ & $-0.0046$ & 0.704 \\
+no distance test & 0.5829 & $+0.0008$ & 0.37 & 1.00 & $+0.003$ & $-0.000$ & $+0.0008$ & 0.749 \\
+no support test & 0.5821 & $+0.0000$ & 0.37 & 1.00 & $+0.000$ & $-0.000$ & $-0.0001$ & 0.714 \\
+no ratio test & 0.5817 & $-0.0004$ & 1.00 & 1.00 & $+0.000$ & $-0.000$ & $+0.0001$ & 0.714 \\
+\bottomrule
+\end{tabular}
+\footnotetext{$\Delta$ is the variant minus archived N-LDF, averaged over the 41
+tasks. Holm correction is over the variants of the family. Local proportion: count-based $(n_{\mathrm{min}}-n_{\mathrm{maj}})/k_d$ over the same neighbors; unguided generation: uniform seed weights, distance-only partners, interpolation centered at $0.5$, acceptance unchanged. Realized ratio is
+the minority--majority ratio after resampling, averaged within task and then
+over tasks (target $0.75$; the two chess tasks, with almost no augmentation,
+pull the mean below the target)}
+\end{table}

@@ -1,0 +1,30 @@
+\begin{table}[htbp]
+\caption{Controls without resampling and further oversamplers, with the
+benchmark strategies they are compared with}
+\label{tab:controls}
+\centering
+\tabsmall
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Strategy} & \textbf{F1} & \textbf{Prec.} & \textbf{Rec.} & \textbf{Spec.} & \textbf{AUPRC} & \hd{\textbf{Realized}}{\textbf{ratio}} \\
+\midrule
+Baseline (default threshold) & 0.4940 & 0.5858 & 0.4583 & 0.9834 & 0.6392 & -- \\
+Baseline, tuned threshold & 0.5813 & 0.5948 & 0.6362 & 0.9321 & 0.6393 & -- \\
+Baseline, class weights & 0.5427 & 0.5543 & 0.6355 & 0.9315 & 0.6322 & -- \\
+\midrule
+SMOTE & 0.5777 & 0.5603 & 0.6830 & 0.9281 & 0.6369 & 1.000 \\
+N-LDF ($r=0.75$) & 0.5821 & 0.6307 & 0.5874 & 0.9650 & 0.6522 & 0.714 \\
+N-LDF (parity) & 0.5823 & 0.6267 & 0.5958 & 0.9586 & 0.6487 & 0.952 \\
+\midrule
+Safe-Level-SMOTE & 0.5599 & 0.5369 & 0.6826 & 0.9228 & 0.6201 & 1.000 \\
+SVM-SMOTE & 0.5901 & 0.5900 & 0.6447 & 0.9492 & 0.6487 & 0.800 \\
+k-means SMOTE & 0.5756 & 0.5826 & 0.6588 & 0.9402 & 0.6386 & 1.001 \\
+\bottomrule
+\end{tabular}
+\footnotetext{Equal-weight means over the 41 tasks. The tuned threshold is chosen
+by inner three-fold validation on the training partition; it leaves the
+predicted probabilities, and hence AUPRC, unchanged. k-means SMOTE fell back
+to SMOTE on 573 of 914 calls. SVM-SMOTE seeds only from minority support
+vectors and stops short of parity}
+\end{table}

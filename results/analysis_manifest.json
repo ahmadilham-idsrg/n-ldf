@@ -1,0 +1,60 @@
+{
+  "analysis_timestamp": "2026-07-19T16:35:47.769013",
+  "input_file": "nldf_results_41_v2_final/fold_level_results.csv",
+  "input_file_sha256": "f0c957d5633e8923c6b0c6588f416b3a903ca044dbc6573f459ccbfe5447d6a4",
+  "audit_file": "nldf_results_41_v2_final/dataset_audit.csv",
+  "audit_file_sha256": "6e3e4d8ae18adfcce061c9f99017bdae9dd01d6d4368165701332f50c7273af5",
+  "output_dir": "nldf_paper_analysis",
+  "total_experiments": 21911,
+  "complete_datasets": 24,
+  "partial_datasets": 17,
+  "methods_analyzed": [
+    "Baseline",
+    "SMOTE",
+    "B-SMOTE",
+    "ADASYN",
+    "SMOTE-Tomek",
+    "N-LDF"
+  ],
+  "bootstrap_iterations": 5000,
+  "significance_alpha": 0.05,
+  "python_version": "3.12.13",
+  "platform": "Linux-6.6.122+-x86_64-with-glibc2.35",
+  "package_versions": {
+    "python": "3.12.13",
+    "numpy": "2.0.2",
+    "pandas": "2.2.2",
+    "scipy": "1.16.3",
+    "matplotlib": "3.10.0",
+    "seaborn": "0.13.2",
+    "scikit-learn": "1.6.1",
+    "imbalanced-learn": "0.14.2",
+    "scikit-posthocs": "0.14.0"
+  },
+  "aggregation_config": {
+    "primary": "dataset-level averaging",
+    "sensitivity": "direct pooling vs dataset-level",
+    "classifier_aggregation": "equal weight per dataset"
+  },
+  "expected_missing_evaluations": 17,
+  "files_generated": [
+    "all_pairwise_exploratory.csv",
+    "classifier_method_summary.csv",
+    "nldf_acceptance_rate.png",
+    "friedman_tests.csv",
+    "nldf_vs_baseline.png",
+    "completeness_report.csv",
+    "nldf_diagnostics_by_dataset.csv",
+    "aggregation_sensitivity.csv",
+    "nldf_diagnostics_by_severity.csv",
+    "nldf_analysis_complete.xlsx",
+    "global_summary.csv",
+    "severity_summary.csv",
+    "nldf_sampling_ratio.png",
+    "nldf_rejection_reasons.png",
+    "f1_by_severity.png",
+    "nldf_diagnostics_dedup.csv",
+    "nldf_pairwise_planned.csv",
+    "dataset_method_means.csv"
+  ]
+}

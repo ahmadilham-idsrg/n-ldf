@@ -1,0 +1,10 @@
+{
+  "platform":"Linux-6.18.44-fc-v51-x86_64-with-glibc2.39",
+  "python":"3.11.15",
+  "processor":"x86_64",
+  "cpu_count":2,
+  "numpy":"2.4.4",
+  "reps":3,
+  "IR":9.0,
+  "threads":1
+}

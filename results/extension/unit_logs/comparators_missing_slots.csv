@@ -1,0 +1,15 @@
+Dataset,Method,Classifier,Repeat,Fold,cache_dir
+ecoli1,SVM-SMOTE,SVM-Linear,3,0,/home/claude/work/repo/keel_cache
+ecoli4,SLS,SVM-RBF,4,0,/home/claude/work/repo/keel_cache
+glass4,SLS,XGBoost,4,1,/home/claude/work/repo/keel_cache
+glass4,SVM-SMOTE,SVM-RBF,1,3,/home/claude/work/repo/keel_cache
+iris0,Baseline-cw,SVM-Linear,1,0,/home/claude/work/repo/keel_cache
+segment0,KMeans-SMOTE,RF,3,2,/home/claude/work/repo/keel_cache
+segment0,SVM-SMOTE,RF,3,2,/home/claude/work/repo/keel_cache
+winequality-red-8_vs_6-7,KMeans-SMOTE,RF,1,4,/home/claude/work/repo/keel_cache
+winequality-red-8_vs_6-7,SVM-SMOTE,RF,1,4,/home/claude/work/repo/keel_cache
+winequality-white-3_vs_7,Baseline-cw,RF,1,4,/home/claude/work/repo/keel_cache
+winequality-white-3_vs_7,SLS,RF,1,4,/home/claude/work/repo/keel_cache
+yeast-1-4-5-8_vs_7,Baseline-cw,SVM-RBF,1,3,/home/claude/work/repo/keel_cache
+yeast-2_vs_4,SLS,SVM-RBF,0,0,/home/claude/work/repo/keel_cache
+yeast-2_vs_8,SVM-SMOTE,XGBoost,1,1,/home/claude/work/repo/keel_cache

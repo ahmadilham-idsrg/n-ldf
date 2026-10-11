@@ -1,0 +1,440 @@
+==============================================================================
+A. Task-level inference per metric (Friedman; Wilcoxon-Pratt; Holm)
+==============================================================================
+
+[F1]  means: Baseline 0.4940, ADASYN 0.5672, B-SMOTE 0.5792, SMOTE 0.5777, SMOTE-Tomek 0.5776, N-LDF 0.5821
+  Friedman all six : chi2=33.6485 p=2.80e-06
+  Friedman five OS : chi2=1.9294 p=0.7487
+  planned family (N-LDF vs ...):
+    Baseline     W=   11.0 raw=6.71e-08 Holm=3.36e-07  mean diff=+0.0881 W-T-L=36-3-2
+    ADASYN       W=  372.0 raw=0.4601 Holm=1.0000  mean diff=+0.0149 W-T-L=20-2-19
+    B-SMOTE      W=  374.0 raw=0.4760 Holm=1.0000  mean diff=+0.0029 W-T-L=17-2-22
+    SMOTE        W=  422.0 raw=0.9432 Holm=1.0000  mean diff=+0.0044 W-T-L=19-3-19
+    SMOTE-Tomek  W=  419.0 raw=0.9123 Holm=1.0000  mean diff=+0.0046 W-T-L=19-3-19
+  mean rank (six strategies): Baseline 4.951, ADASYN 3.561, B-SMOTE 3.183, SMOTE 3.098, SMOTE-Tomek 3.073, N-LDF 3.134
+  exploratory family: baseline pairs Holm min=0.0000 max=0.0012; oversampler pairs Holm min=0.4243
+  exploratory pairs significant after Holm-15: Baseline vs N-LDF (Holm 0.0000, diff -0.0881); Baseline vs SMOTE (Holm 0.0001, diff -0.0837); Baseline vs SMOTE-Tomek (Holm 0.0001, diff -0.0836); Baseline vs B-SMOTE (Holm 0.0004, diff -0.0852); Baseline vs ADASYN (Holm 0.0012, diff -0.0732)
+
+[AUPRC]  means: Baseline 0.6392, ADASYN 0.6276, B-SMOTE 0.6359, SMOTE 0.6369, SMOTE-Tomek 0.6366, N-LDF 0.6522
+  Friedman all six : chi2=18.1689 p=0.0027
+  Friedman five OS : chi2=19.9789 p=5.04e-04
+  planned family (N-LDF vs ...):
+    Baseline     W=  241.0 raw=0.0156 Holm=0.0625  mean diff=+0.0130 W-T-L=25-3-13
+    ADASYN       W=  256.0 raw=0.0250 Holm=0.0749  mean diff=+0.0245 W-T-L=26-2-13
+    B-SMOTE      W=  198.0 raw=0.0028 Holm=0.0138  mean diff=+0.0162 W-T-L=29-2-10
+    SMOTE        W=  290.0 raw=0.0747 Holm=0.1258  mean diff=+0.0152 W-T-L=24-3-14
+    SMOTE-Tomek  W=  284.0 raw=0.0629 Holm=0.1258  mean diff=+0.0155 W-T-L=24-3-14
+  mean rank (six strategies): Baseline 3.439, ADASYN 4.024, B-SMOTE 4.195, SMOTE 3.268, SMOTE-Tomek 3.354, N-LDF 2.720
+  exploratory family: baseline pairs Holm min=0.1876 max=1.0000; oversampler pairs Holm min=0.0403
+  exploratory pairs significant after Holm-15: ADASYN vs SMOTE-Tomek (Holm 0.0403, diff -0.0090); B-SMOTE vs N-LDF (Holm 0.0403, diff -0.0162); ADASYN vs SMOTE (Holm 0.0468, diff -0.0093)
+
+[AUC-ROC]  means: Baseline 0.8759, ADASYN 0.8891, B-SMOTE 0.8873, SMOTE 0.8904, SMOTE-Tomek 0.8909, N-LDF 0.8868
+  Friedman all six : chi2=22.5635 p=4.09e-04
+  Friedman five OS : chi2=12.2947 p=0.0153
+  planned family (N-LDF vs ...):
+    Baseline     W=  185.0 raw=0.0017 Holm=0.0084  mean diff=+0.0110 W-T-L=28-3-10
+    ADASYN       W=  370.0 raw=0.4445 Holm=0.8584  mean diff=-0.0023 W-T-L=20-2-19
+    B-SMOTE      W=  368.0 raw=0.4292 Holm=0.8584  mean diff=-0.0005 W-T-L=18-2-21
+    SMOTE        W=  274.0 raw=0.0466 Holm=0.1407  mean diff=-0.0036 W-T-L=15-3-23
+    SMOTE-Tomek  W=  265.0 raw=0.0352 Holm=0.1407  mean diff=-0.0041 W-T-L=14-3-24
+  mean rank (six strategies): Baseline 4.415, ADASYN 3.585, B-SMOTE 3.780, SMOTE 2.951, SMOTE-Tomek 2.744, N-LDF 3.524
+  exploratory family: baseline pairs Holm min=0.0091 max=0.1132; oversampler pairs Holm min=0.1400
+  exploratory pairs significant after Holm-15: Baseline vs SMOTE-Tomek (Holm 0.0091, diff -0.0151); Baseline vs SMOTE (Holm 0.0123, diff -0.0146); Baseline vs N-LDF (Holm 0.0217, diff -0.0110)
+
+[Recall]  means: Baseline 0.4583, ADASYN 0.6885, B-SMOTE 0.6572, SMOTE 0.6830, SMOTE-Tomek 0.6818, N-LDF 0.5874
+  Friedman all six : chi2=131.8553 p=9.61e-27
+  Friedman five OS : chi2=73.9535 p=3.32e-15
+  planned family (N-LDF vs ...):
+    Baseline     W=    0.0 raw=3.00e-08 Holm=1.50e-07  mean diff=+0.1290 W-T-L=38-3-0
+    ADASYN       W=   27.0 raw=2.78e-07 Holm=5.57e-07  mean diff=-0.1012 W-T-L=2-5-34
+    B-SMOTE      W=   55.0 raw=1.38e-06 Holm=1.38e-06  mean diff=-0.0698 W-T-L=4-3-34
+    SMOTE        W=    8.0 raw=6.18e-08 Holm=2.47e-07  mean diff=-0.0956 W-T-L=1-4-36
+    SMOTE-Tomek  W=   14.0 raw=9.52e-08 Holm=2.85e-07  mean diff=-0.0945 W-T-L=2-4-35
+  mean rank (six strategies): Baseline 5.768, ADASYN 2.000, B-SMOTE 3.341, SMOTE 2.561, SMOTE-Tomek 2.707, N-LDF 4.622
+  exploratory family: baseline pairs Holm min=0.0000 max=0.0000; oversampler pairs Holm min=0.0000
+  exploratory pairs significant after Holm-15: Baseline vs SMOTE (Holm 0.0000, diff -0.2247); Baseline vs SMOTE-Tomek (Holm 0.0000, diff -0.2235); Baseline vs N-LDF (Holm 0.0000, diff -0.1290); Baseline vs ADASYN (Holm 0.0000, diff -0.2302); Baseline vs B-SMOTE (Holm 0.0000, diff -0.1989); SMOTE vs N-LDF (Holm 0.0000, diff +0.0956); SMOTE-Tomek vs N-LDF (Holm 0.0000, diff +0.0945); ADASYN vs N-LDF (Holm 0.0000, diff +0.1012); B-SMOTE vs N-LDF (Holm 0.0000, diff +0.0698); ADASYN vs B-SMOTE (Holm 0.0002, diff +0.0313); ADASYN vs SMOTE-Tomek (Holm 0.0162, diff +0.0067); B-SMOTE vs SMOTE (Holm 0.0338, diff -0.0258); B-SMOTE vs SMOTE-Tomek (Holm 0.0338, diff -0.0246); ADASYN vs SMOTE (Holm 0.0382, diff +0.0055)
+
+[Specificity]  means: Baseline 0.9834, ADASYN 0.9182, B-SMOTE 0.9329, SMOTE 0.9281, SMOTE-Tomek 0.9286, N-LDF 0.9650
+  Friedman all six : chi2=133.8361 p=3.65e-27
+  Friedman five OS : chi2=99.1904 p=1.46e-20
+  planned family (N-LDF vs ...):
+    Baseline     W=   35.0 raw=3.63e-07 Holm=3.63e-07  mean diff=-0.0184 W-T-L=5-3-33
+    ADASYN       W=    0.0 raw=3.00e-08 Holm=1.50e-07  mean diff=+0.0469 W-T-L=38-3-0
+    B-SMOTE      W=    6.0 raw=4.21e-08 Holm=1.50e-07  mean diff=+0.0321 W-T-L=38-2-1
+    SMOTE        W=    4.0 raw=4.03e-08 Holm=1.50e-07  mean diff=+0.0369 W-T-L=37-3-1
+    SMOTE-Tomek  W=    0.0 raw=3.00e-08 Holm=1.50e-07  mean diff=+0.0364 W-T-L=38-3-0
+  mean rank (six strategies): Baseline 1.537, ADASYN 5.354, B-SMOTE 3.805, SMOTE 4.232, SMOTE-Tomek 4.049, N-LDF 2.024
+  exploratory family: baseline pairs Holm min=0.0000 max=0.0000; oversampler pairs Holm min=0.0000
+  exploratory pairs significant after Holm-15: ADASYN vs N-LDF (Holm 0.0000, diff -0.0469); SMOTE-Tomek vs N-LDF (Holm 0.0000, diff -0.0364); SMOTE vs N-LDF (Holm 0.0000, diff -0.0369); B-SMOTE vs N-LDF (Holm 0.0000, diff -0.0321); Baseline vs SMOTE (Holm 0.0000, diff +0.0553); Baseline vs SMOTE-Tomek (Holm 0.0000, diff +0.0548); Baseline vs ADASYN (Holm 0.0000, diff +0.0653); Baseline vs B-SMOTE (Holm 0.0000, diff +0.0505); Baseline vs N-LDF (Holm 0.0000, diff +0.0184); ADASYN vs B-SMOTE (Holm 0.0000, diff -0.0147); ADASYN vs SMOTE-Tomek (Holm 0.0000, diff -0.0104); ADASYN vs SMOTE (Holm 0.0000, diff -0.0100)
+
+[G-Mean]  means: Baseline 0.5366, ADASYN 0.7438, B-SMOTE 0.7239, SMOTE 0.7466, SMOTE-Tomek 0.7457, N-LDF 0.6739
+  Friedman all six : chi2=109.4490 p=5.36e-22
+  Friedman five OS : chi2=48.8418 p=6.30e-10
+  planned family (N-LDF vs ...):
+    Baseline     W=    0.0 raw=3.00e-08 Holm=1.50e-07  mean diff=+0.1373 W-T-L=38-3-0
+    ADASYN       W=   66.0 raw=2.55e-06 Holm=5.09e-06  mean diff=-0.0699 W-T-L=6-2-33
+    B-SMOTE      W=   91.0 raw=1.18e-05 Holm=1.18e-05  mean diff=-0.0499 W-T-L=7-2-32
+    SMOTE        W=   36.0 raw=3.88e-07 Holm=1.55e-06  mean diff=-0.0726 W-T-L=5-3-33
+    SMOTE-Tomek  W=   42.0 raw=5.83e-07 Holm=1.75e-06  mean diff=-0.0718 W-T-L=5-3-33
+  mean rank (six strategies): Baseline 5.732, ADASYN 2.439, B-SMOTE 3.427, SMOTE 2.537, SMOTE-Tomek 2.512, N-LDF 4.354
+  exploratory family: baseline pairs Holm min=0.0000 max=0.0000; oversampler pairs Holm min=0.0000
+  exploratory pairs significant after Holm-15: Baseline vs SMOTE (Holm 0.0000, diff -0.2100); Baseline vs SMOTE-Tomek (Holm 0.0000, diff -0.2091); Baseline vs N-LDF (Holm 0.0000, diff -0.1373); Baseline vs ADASYN (Holm 0.0000, diff -0.2072); Baseline vs B-SMOTE (Holm 0.0000, diff -0.1873); SMOTE vs N-LDF (Holm 0.0000, diff +0.0726); SMOTE-Tomek vs N-LDF (Holm 0.0000, diff +0.0718); ADASYN vs N-LDF (Holm 0.0000, diff +0.0699); B-SMOTE vs N-LDF (Holm 0.0001, diff +0.0499); ADASYN vs B-SMOTE (Holm 0.0040, diff +0.0199); B-SMOTE vs SMOTE (Holm 0.0078, diff -0.0227); B-SMOTE vs SMOTE-Tomek (Holm 0.0078, diff -0.0218)
+
+[Precision]  means: Baseline 0.5858, ADASYN 0.5430, B-SMOTE 0.5724, SMOTE 0.5603, SMOTE-Tomek 0.5606, N-LDF 0.6307
+  Friedman all six : chi2=38.2083 p=3.43e-07
+  Friedman five OS : chi2=42.1891 p=1.52e-08
+  planned family (N-LDF vs ...):
+    Baseline     W=  275.0 raw=0.0481 Holm=0.0481  mean diff=+0.0449 W-T-L=23-3-15
+    ADASYN       W=   92.0 raw=1.37e-05 Holm=6.84e-05  mean diff=+0.0877 W-T-L=33-3-5
+    B-SMOTE      W=  126.0 raw=8.61e-05 Holm=1.72e-04  mean diff=+0.0583 W-T-L=31-2-8
+    SMOTE        W=  110.0 raw=3.86e-05 Holm=1.30e-04  mean diff=+0.0704 W-T-L=30-3-8
+    SMOTE-Tomek  W=  107.0 raw=3.26e-05 Holm=1.30e-04  mean diff=+0.0701 W-T-L=32-3-6
+  mean rank (six strategies): Baseline 3.244, ADASYN 4.524, B-SMOTE 3.488, SMOTE 3.768, SMOTE-Tomek 3.780, N-LDF 2.195
+  exploratory family: baseline pairs Holm min=0.2809 max=1.0000; oversampler pairs Holm min=0.0002
+  exploratory pairs significant after Holm-15: ADASYN vs N-LDF (Holm 0.0002, diff -0.0877); SMOTE-Tomek vs N-LDF (Holm 0.0005, diff -0.0701); SMOTE vs N-LDF (Holm 0.0005, diff -0.0704); B-SMOTE vs N-LDF (Holm 0.0010, diff -0.0583); ADASYN vs B-SMOTE (Holm 0.0031, diff -0.0294); ADASYN vs SMOTE-Tomek (Holm 0.0190, diff -0.0176); ADASYN vs SMOTE (Holm 0.0352, diff -0.0173)
+
+==============================================================================
+B. Source-aware inference (15 source datasets)
+==============================================================================
+
+[F1] one block per source (Wilcoxon-Pratt on 15 source means, Holm over 5):
+    Baseline     raw=0.0034 Holm=0.0169 mean=+0.0676 sources +/-=11/2
+    ADASYN       raw=0.7547 Holm=1.0000 mean=-0.0045 sources +/-=7/7
+    B-SMOTE      raw=0.2011 Holm=0.8044 mean=-0.0099 sources +/-=5/9
+    SMOTE        raw=0.7114 Holm=1.0000 mean=-0.0083 sources +/-=6/7
+    SMOTE-Tomek  raw=0.6695 Holm=1.0000 mean=-0.0083 sources +/-=6/7
+[F1] source-cluster bootstrap (10000 resamples) of the mean paired difference:
+    Baseline     mean=+0.0881 95% CI [+0.0532, +0.1187]  excludes 0: True
+    ADASYN       mean=+0.0149 95% CI [-0.0279, +0.0437]  excludes 0: False
+    B-SMOTE      mean=+0.0029 95% CI [-0.0251, +0.0256]  excludes 0: False
+    SMOTE        mean=+0.0044 95% CI [-0.0287, +0.0250]  excludes 0: False
+    SMOTE-Tomek  mean=+0.0046 95% CI [-0.0281, +0.0248]  excludes 0: False
+[F1] mixed model (source + task random intercepts; converged=True): var source=0.08369 task=0.02670 resid=0.00320
+    Baseline     minus N-LDF = -0.0881 (se 0.0125) p=1.78e-12
+    ADASYN       minus N-LDF = -0.0149 (se 0.0125) p=0.2332
+    B-SMOTE      minus N-LDF = -0.0029 (se 0.0125) p=0.8155
+    SMOTE        minus N-LDF = -0.0044 (se 0.0125) p=0.7249
+    SMOTE-Tomek  minus N-LDF = -0.0046 (se 0.0125) p=0.7155
+
+[AUPRC] one block per source (Wilcoxon-Pratt on 15 source means, Holm over 5):
+    Baseline     raw=0.0246 Holm=0.1229 mean=+0.0106 sources +/-=11/2
+    ADASYN       raw=0.3485 Holm=1.0000 mean=+0.0110 sources +/-=8/6
+    B-SMOTE      raw=0.1474 Holm=0.5895 mean=+0.0079 sources +/-=10/4
+    SMOTE        raw=0.5887 Holm=1.0000 mean=+0.0062 sources +/-=7/6
+    SMOTE-Tomek  raw=0.7114 Holm=1.0000 mean=+0.0070 sources +/-=6/7
+[AUPRC] source-cluster bootstrap (10000 resamples) of the mean paired difference:
+    Baseline     mean=+0.0130 95% CI [+0.0035, +0.0282]  excludes 0: True
+    ADASYN       mean=+0.0245 95% CI [-0.0026, +0.0455]  excludes 0: False
+    B-SMOTE      mean=+0.0162 95% CI [-0.0005, +0.0314]  excludes 0: False
+    SMOTE        mean=+0.0152 95% CI [-0.0059, +0.0342]  excludes 0: False
+    SMOTE-Tomek  mean=+0.0155 95% CI [-0.0054, +0.0341]  excludes 0: False
+[AUPRC] mixed model (source + task random intercepts; converged=True): var source=0.06215 task=0.03567 resid=0.00119
+    Baseline     minus N-LDF = -0.0130 (se 0.0076) p=0.0879
+    ADASYN       minus N-LDF = -0.0245 (se 0.0076) p=0.0013
+    B-SMOTE      minus N-LDF = -0.0162 (se 0.0076) p=0.0328
+    SMOTE        minus N-LDF = -0.0152 (se 0.0076) p=0.0452
+    SMOTE-Tomek  minus N-LDF = -0.0155 (se 0.0076) p=0.0411
+
+==============================================================================
+C. Acceptance-test accounting by stratum (N-LDF calls)
+==============================================================================
+          n_attempted  n_accepted  n_rejected_distance  n_rejected_maj  n_rejected_density  none  n_rejected_distance_pct  n_rejected_maj_pct  n_rejected_density_pct
+Severity                                                                                                                                                             
+Mild            63413       62465                    0               1                  15   932                 0.000000            0.001577                0.023654
+High           108928      108445                    2             155                 106   220                 0.001836            0.142296                0.097312
+Extreme        474413      353647               106176            6898                3927  3765                22.380500            1.454007                0.827760
+All            646754      524557               106178            7054                4048  4917                16.417061            1.090677                0.625895
+  share of distance rejections from the two chess tasks: 0.9959 (105740 of 106178; chess attempts 105760, accepted 20)
+  calls per stratum: {'Mild': 250, 'High': 285, 'Extreme': 379}
+  mean fold IR per stratum: {'Mild': 3.6763201655689035, 'High': 21.527685996144804, 'Extreme': 65.88107221688239}
+  kappa threshold IR^-0.7 for eta>=0: {'Mild': 0.4019857624349903, 'High': 0.11665459624944223, 'Extreme': 0.05331722515738645}
+
+==============================================================================
+D. Sensitivity analyses (F1)
+==============================================================================
+
+[without the two chess tasks] n=39  means: Baseline 0.4709, ADASYN 0.5465, B-SMOTE 0.5592, SMOTE 0.5576, SMOTE-Tomek 0.5574, N-LDF 0.5632
+  mean rank (six strategies): Baseline 4.962, ADASYN 3.628, B-SMOTE 3.154, SMOTE 3.090, SMOTE-Tomek 3.090, N-LDF 3.077
+  Friedman all=4.91e-06 five=0.6587
+    vs Baseline     Holm=5.90e-07 mean diff=+0.0923 W-T-L=35-2-2
+    vs ADASYN       Holm=1.0000 mean diff=+0.0167 W-T-L=20-1-18
+    vs B-SMOTE      Holm=1.0000 mean diff=+0.0039 W-T-L=17-1-21
+    vs SMOTE        Holm=1.0000 mean diff=+0.0056 W-T-L=19-2-18
+    vs SMOTE-Tomek  Holm=1.0000 mean diff=+0.0058 W-T-L=19-2-18
+
+[without the eleven categorical tasks] n=30  means: Baseline 0.4573, ADASYN 0.5343, B-SMOTE 0.5478, SMOTE 0.5476, SMOTE-Tomek 0.5477, N-LDF 0.5542
+  mean rank (six strategies): Baseline 4.700, ADASYN 3.800, B-SMOTE 3.167, SMOTE 3.133, SMOTE-Tomek 3.067, N-LDF 3.133
+  Friedman all=0.0021 five=0.4696
+    vs Baseline     Holm=2.47e-05 mean diff=+0.0969 W-T-L=26-2-2
+    vs ADASYN       Holm=1.0000 mean diff=+0.0199 W-T-L=15-1-14
+    vs B-SMOTE      Holm=1.0000 mean diff=+0.0063 W-T-L=13-1-16
+    vs SMOTE        Holm=1.0000 mean diff=+0.0066 W-T-L=14-2-14
+    vs SMOTE-Tomek  Holm=1.0000 mean diff=+0.0065 W-T-L=14-2-14
+
+==============================================================================
+E. Per-classifier F1 inference
+==============================================================================
+
+[RF] n=41 Friedman five OS p=0.0015; Baseline 0.5232, ADASYN 0.5865, B-SMOTE 0.5860, SMOTE 0.5937, SMOTE-Tomek 0.5933, N-LDF 0.5722
+    vs Baseline     raw=1.03e-04 Holm-5=5.17e-04 mean diff=+0.0490 W-T-L=24-12-5
+    vs ADASYN       raw=0.0332 Holm-5=0.0332 mean diff=-0.0143 W-T-L=11-6-24
+    vs B-SMOTE      raw=0.0027 Holm-5=0.0081 mean diff=-0.0137 W-T-L=8-8-25
+    vs SMOTE        raw=0.0018 Holm-5=0.0070 mean diff=-0.0215 W-T-L=8-6-27
+    vs SMOTE-Tomek  raw=0.0039 Holm-5=0.0081 mean diff=-0.0210 W-T-L=9-6-26
+
+[SVM-Linear] n=41 Friedman five OS p=0.0015; Baseline 0.4533, ADASYN 0.5112, B-SMOTE 0.5256, SMOTE 0.5276, SMOTE-Tomek 0.5280, N-LDF 0.5654
+    vs Baseline     raw=4.62e-06 Holm-5=2.31e-05 mean diff=+0.1120 W-T-L=29-7-5
+    vs ADASYN       raw=8.98e-04 Holm-5=0.0036 mean diff=+0.0542 W-T-L=25-7-9
+    vs B-SMOTE      raw=0.0038 Holm-5=0.0115 mean diff=+0.0397 W-T-L=24-7-10
+    vs SMOTE        raw=0.0043 Holm-5=0.0115 mean diff=+0.0378 W-T-L=24-7-10
+    vs SMOTE-Tomek  raw=0.0070 Holm-5=0.0115 mean diff=+0.0374 W-T-L=23-7-11
+
+[SVM-RBF] n=41 Friedman five OS p=0.1170; Baseline 0.4764, ADASYN 0.5771, B-SMOTE 0.6018, SMOTE 0.5924, SMOTE-Tomek 0.5928, N-LDF 0.6061
+    vs Baseline     raw=1.95e-07 Holm-5=9.74e-07 mean diff=+0.1297 W-T-L=35-3-3
+    vs ADASYN       raw=0.2227 Holm-5=0.8906 mean diff=+0.0290 W-T-L=20-5-16
+    vs B-SMOTE      raw=0.9845 Holm-5=0.9845 mean diff=+0.0043 W-T-L=19-3-19
+    vs SMOTE        raw=0.2933 Holm-5=0.8906 mean diff=+0.0138 W-T-L=21-5-15
+    vs SMOTE-Tomek  raw=0.3054 Holm-5=0.8906 mean diff=+0.0133 W-T-L=21-5-15
+
+[XGBoost] n=41 Friedman five OS p=0.8740; Baseline 0.5231, ADASYN 0.5941, B-SMOTE 0.6034, SMOTE 0.5970, SMOTE-Tomek 0.5958, N-LDF 0.5847
+    vs Baseline     raw=7.08e-06 Holm-5=3.54e-05 mean diff=+0.0616 W-T-L=32-3-6
+    vs ADASYN       raw=0.3473 Holm-5=1.0000 mean diff=-0.0094 W-T-L=16-3-22
+    vs B-SMOTE      raw=0.0062 Holm-5=0.0250 mean diff=-0.0187 W-T-L=16-2-23
+    vs SMOTE        raw=0.4880 Holm-5=1.0000 mean diff=-0.0123 W-T-L=19-3-19
+    vs SMOTE-Tomek  raw=0.5467 Holm-5=1.0000 mean diff=-0.0111 W-T-L=18-3-20
+
+  Holm over all 20 classifier-specific comparisons (N-LDF vs ...):
+    RF          vs Baseline     raw=1.03e-04 Holm-20=0.0018 diff=+0.0490 W-T-L=24-12-5
+    RF          vs ADASYN       raw=0.0332 Holm-20=0.2659 diff=-0.0143 W-T-L=11-6-24
+    RF          vs B-SMOTE      raw=0.0027 Holm-20=0.0378 diff=-0.0137 W-T-L=8-8-25
+    RF          vs SMOTE        raw=0.0018 Holm-20=0.0263 diff=-0.0215 W-T-L=8-6-27
+    RF          vs SMOTE-Tomek  raw=0.0039 Holm-20=0.0498 diff=-0.0210 W-T-L=9-6-26
+    SVM-Linear  vs Baseline     raw=4.62e-06 Holm-20=8.78e-05 diff=+0.1120 W-T-L=29-7-5
+    SVM-Linear  vs ADASYN       raw=8.98e-04 Holm-20=0.0144 diff=+0.0542 W-T-L=25-7-9
+    SVM-Linear  vs B-SMOTE      raw=0.0038 Holm-20=0.0498 diff=+0.0397 W-T-L=24-7-10
+    SVM-Linear  vs SMOTE        raw=0.0043 Holm-20=0.0498 diff=+0.0378 W-T-L=24-7-10
+    SVM-Linear  vs SMOTE-Tomek  raw=0.0070 Holm-20=0.0630 diff=+0.0374 W-T-L=23-7-11
+    SVM-RBF     vs Baseline     raw=1.95e-07 Holm-20=3.89e-06 diff=+0.1297 W-T-L=35-3-3
+    SVM-RBF     vs ADASYN       raw=0.2227 Holm-20=1.0000 diff=+0.0290 W-T-L=20-5-16
+    SVM-RBF     vs B-SMOTE      raw=0.9845 Holm-20=1.0000 diff=+0.0043 W-T-L=19-3-19
+    SVM-RBF     vs SMOTE        raw=0.2933 Holm-20=1.0000 diff=+0.0138 W-T-L=21-5-15
+    SVM-RBF     vs SMOTE-Tomek  raw=0.3054 Holm-20=1.0000 diff=+0.0133 W-T-L=21-5-15
+    XGBoost     vs Baseline     raw=7.08e-06 Holm-20=1.27e-04 diff=+0.0616 W-T-L=32-3-6
+    XGBoost     vs ADASYN       raw=0.3473 Holm-20=1.0000 diff=-0.0094 W-T-L=16-3-22
+    XGBoost     vs B-SMOTE      raw=0.0062 Holm-20=0.0625 diff=-0.0187 W-T-L=16-2-23
+    XGBoost     vs SMOTE        raw=0.4880 Holm-20=1.0000 diff=-0.0123 W-T-L=19-3-19
+    XGBoost     vs SMOTE-Tomek  raw=0.5467 Holm-20=1.0000 diff=-0.0111 W-T-L=18-3-20
+
+==============================================================================
+E2. Per-classifier source-aware inference and the RF vs linear-SVM interaction
+==============================================================================
+  one block per source, Holm over 20 (N-LDF vs ...):
+    RF          vs Baseline     raw=0.0157 Holm-20=0.2361 diff=+0.0399 sources +/-=9/2
+    RF          vs ADASYN       raw=0.0566 Holm-20=0.6790 diff=-0.0182 sources +/-=3/10
+    RF          vs B-SMOTE      raw=0.0164 Holm-20=0.2361 diff=-0.0162 sources +/-=2/10
+    RF          vs SMOTE        raw=0.0048 Holm-20=0.0921 diff=-0.0210 sources +/-=1/12
+    RF          vs SMOTE-Tomek  raw=0.0048 Holm-20=0.0921 diff=-0.0188 sources +/-=1/12
+    SVM-Linear  vs Baseline     raw=0.0113 Holm-20=0.1812 diff=+0.0870 sources +/-=11/2
+    SVM-Linear  vs ADASYN       raw=0.1533 Holm-20=1.0000 diff=+0.0228 sources +/-=8/4
+    SVM-Linear  vs B-SMOTE      raw=0.2303 Holm-20=1.0000 diff=+0.0162 sources +/-=8/4
+    SVM-Linear  vs SMOTE        raw=0.3315 Holm-20=1.0000 diff=+0.0157 sources +/-=7/5
+    SVM-Linear  vs SMOTE-Tomek  raw=0.3916 Holm-20=1.0000 diff=+0.0149 sources +/-=7/5
+    SVM-RBF     vs Baseline     raw=0.0019 Holm-20=0.0385 diff=+0.0969 sources +/-=12/1
+    SVM-RBF     vs ADASYN       raw=0.7979 Holm-20=1.0000 diff=-0.0058 sources +/-=6/7
+    SVM-RBF     vs B-SMOTE      raw=0.2924 Holm-20=1.0000 diff=-0.0181 sources +/-=5/8
+    SVM-RBF     vs SMOTE        raw=0.5887 Holm-20=1.0000 diff=-0.0108 sources +/-=5/8
+    SVM-RBF     vs SMOTE-Tomek  raw=0.5501 Holm-20=1.0000 diff=-0.0126 sources +/-=5/8
+    XGBoost     vs Baseline     raw=0.0048 Holm-20=0.0921 diff=+0.0467 sources +/-=11/2
+    XGBoost     vs ADASYN       raw=0.2011 Holm-20=1.0000 diff=-0.0170 sources +/-=5/9
+    XGBoost     vs B-SMOTE      raw=0.0248 Holm-20=0.3225 diff=-0.0214 sources +/-=5/9
+    XGBoost     vs SMOTE        raw=0.3193 Holm-20=1.0000 diff=-0.0168 sources +/-=6/7
+    XGBoost     vs SMOTE-Tomek  raw=0.2671 Holm-20=1.0000 diff=-0.0164 sources +/-=5/8
+  source-cluster bootstrap 95% intervals:
+    RF          vs Baseline     diff=+0.0490 CI=[+0.0179, +0.0883]  excludes 0
+    RF          vs ADASYN       diff=-0.0143 CI=[-0.0443, +0.0055]
+    RF          vs B-SMOTE      diff=-0.0137 CI=[-0.0324, +0.0017]
+    RF          vs SMOTE        diff=-0.0215 CI=[-0.0395, -0.0059]  excludes 0
+    RF          vs SMOTE-Tomek  diff=-0.0210 CI=[-0.0387, -0.0052]  excludes 0
+    SVM-Linear  vs Baseline     diff=+0.1120 CI=[+0.0457, +0.1668]  excludes 0
+    SVM-Linear  vs ADASYN       diff=+0.0542 CI=[+0.0109, +0.0856]  excludes 0
+    SVM-Linear  vs B-SMOTE      diff=+0.0397 CI=[+0.0054, +0.0642]  excludes 0
+    SVM-Linear  vs SMOTE        diff=+0.0378 CI=[+0.0063, +0.0589]  excludes 0
+    SVM-Linear  vs SMOTE-Tomek  diff=+0.0374 CI=[+0.0058, +0.0583]  excludes 0
+    SVM-RBF     vs Baseline     diff=+0.1297 CI=[+0.0748, +0.1690]  excludes 0
+    SVM-RBF     vs ADASYN       diff=+0.0290 CI=[-0.0464, +0.0807]
+    SVM-RBF     vs B-SMOTE      diff=+0.0043 CI=[-0.0516, +0.0467]
+    SVM-RBF     vs SMOTE        diff=+0.0138 CI=[-0.0499, +0.0537]
+    SVM-RBF     vs SMOTE-Tomek  diff=+0.0133 CI=[-0.0505, +0.0532]
+    XGBoost     vs Baseline     diff=+0.0616 CI=[+0.0305, +0.1000]  excludes 0
+    XGBoost     vs ADASYN       diff=-0.0094 CI=[-0.0470, +0.0118]
+    XGBoost     vs B-SMOTE      diff=-0.0187 CI=[-0.0426, -0.0004]  excludes 0
+    XGBoost     vs SMOTE        diff=-0.0123 CI=[-0.0485, +0.0074]
+    XGBoost     vs SMOTE-Tomek  diff=-0.0111 CI=[-0.0457, +0.0069]
+  interaction contrast (N-LDF - m | RF) - (N-LDF - m | SVM-Linear):
+    vs ADASYN       contrast=-0.0684 source-p=0.0041 Holm-4=0.0162 CI=[-0.0934, -0.0308] sources negative=12/15
+    vs SMOTE        contrast=-0.0593 source-p=0.0058 Holm-4=0.0173 CI=[-0.0786, -0.0292] sources negative=11/15
+    vs B-SMOTE      contrast=-0.0535 source-p=0.0086 Holm-4=0.0173 CI=[-0.0727, -0.0243] sources negative=10/15
+    vs SMOTE-Tomek  contrast=-0.0585 source-p=0.0133 Holm-4=0.0173 CI=[-0.0789, -0.0262] sources negative=10/15
+    vs Baseline     contrast=-0.0630 source-p=0.2924 Holm-4=nan CI=[-0.1209, +0.0142] sources negative=8/15
+  global method x classifier LRT: LR=16.23 df=15 p=0.3669
+  interaction contrasts over all six classifier pairs (one block per source, Holm over 24):
+    RF vs SVM-Linear         vs ADASYN       contrast=-0.0684 raw=0.0041 Holm-24=0.0973
+    RF vs SVM-Linear         vs B-SMOTE      contrast=-0.0535 raw=0.0086 Holm-24=0.1892
+    RF vs SVM-Linear         vs SMOTE        contrast=-0.0593 raw=0.0058 Holm-24=0.1329
+    RF vs SVM-Linear         vs SMOTE-Tomek  contrast=-0.0585 raw=0.0133 Holm-24=0.2793
+    SVM-Linear vs SVM-RBF    vs B-SMOTE      contrast=+0.0354 raw=0.0246 Holm-24=0.4670
+    SVM-Linear vs SVM-RBF    vs SMOTE        contrast=+0.0240 raw=0.0566 Holm-24=0.9053
+    SVM-Linear vs SVM-RBF    vs SMOTE-Tomek  contrast=+0.0241 raw=0.0378 Holm-24=0.6800
+    SVM-Linear vs XGBoost    vs ADASYN       contrast=+0.0636 raw=0.0184 Holm-24=0.3675
+    SVM-Linear vs XGBoost    vs B-SMOTE      contrast=+0.0584 raw=0.0381 Holm-24=0.6800
+    SVM-Linear vs XGBoost    vs SMOTE        contrast=+0.0501 raw=0.0644 Holm-24=0.9655
+
+==============================================================================
+B2. Paired-difference models with source clustering (F1, AUPRC)
+==============================================================================
+  [F1] cluster-robust regression of the paired difference (t, 14 df):
+    vs Baseline     delta=+0.0881 SE=0.0159 t=+5.54 raw p=7.31e-05 Holm-5=3.66e-04
+    vs ADASYN       delta=+0.0149 SE=0.0190 t=+0.79 raw p=0.4455 Holm-5=1.0000
+    vs B-SMOTE      delta=+0.0029 SE=0.0142 t=+0.21 raw p=0.8397 Holm-5=1.0000
+    vs SMOTE        delta=+0.0044 SE=0.0139 t=+0.32 raw p=0.7562 Holm-5=1.0000
+    vs SMOTE-Tomek  delta=+0.0046 SE=0.0137 t=+0.33 raw p=0.7450 Holm-5=1.0000
+/tmp/claude-0/-home-claude/444f7bb5-62be-55f5-b15b-069ac32200a2/scratchpad/r2run/supplementary_analysis.py:287: ConvergenceWarning: The MLE may be on the boundary of the parameter space.
+  fit = model.fit(reml=True, method=["lbfgs", "powell"])
+  [F1] random-slope model (source-specific N-LDF effect; converged=True; var slope=0.000253):
+    Baseline     m - N-LDF = -0.0833 (se 0.0143) p=5.18e-09
+    ADASYN       m - N-LDF = -0.0101 (se 0.0143) p=0.4780
+    B-SMOTE      m - N-LDF = +0.0019 (se 0.0143) p=0.8962
+    SMOTE        m - N-LDF = +0.0004 (se 0.0143) p=0.9788
+    SMOTE-Tomek  m - N-LDF = +0.0002 (se 0.0143) p=0.9876
+  [AUPRC] cluster-robust regression of the paired difference (t, 14 df):
+    vs Baseline     delta=+0.0130 SE=0.0065 t=+1.99 raw p=0.0664 Holm-5=0.3320
+    vs ADASYN       delta=+0.0245 SE=0.0127 t=+1.93 raw p=0.0742 Holm-5=0.3320
+    vs B-SMOTE      delta=+0.0162 SE=0.0091 t=+1.78 raw p=0.0963 Holm-5=0.3320
+    vs SMOTE        delta=+0.0152 SE=0.0102 t=+1.49 raw p=0.1582 Holm-5=0.3320
+    vs SMOTE-Tomek  delta=+0.0155 SE=0.0100 t=+1.55 raw p=0.1423 Holm-5=0.3320
+/tmp/claude-0/-home-claude/444f7bb5-62be-55f5-b15b-069ac32200a2/scratchpad/r2run/supplementary_analysis.py:287: ConvergenceWarning: The MLE may be on the boundary of the parameter space.
+  fit = model.fit(reml=True, method=["lbfgs", "powell"])
+  [AUPRC] random-slope model (source-specific N-LDF effect; converged=True; var slope=0.000279):
+    Baseline     m - N-LDF = -0.0077 (se 0.0093) p=0.4072
+    ADASYN       m - N-LDF = -0.0193 (se 0.0093) p=0.0384
+    B-SMOTE      m - N-LDF = -0.0110 (se 0.0093) p=0.2387
+    SMOTE        m - N-LDF = -0.0100 (se 0.0093) p=0.2841
+    SMOTE-Tomek  m - N-LDF = -0.0103 (se 0.0093) p=0.2700
+
+==============================================================================
+B3. Equivalence margins: 90% source-cluster bootstrap intervals (TOST at 5%)
+==============================================================================
+  [F1] N-LDF - ADASYN       mean=+0.0149 90% CI=[-0.0202, +0.0402] smallest equivalence margin=0.0402 non-inferiority margin=0.0202
+  [F1] N-LDF - B-SMOTE      mean=+0.0029 90% CI=[-0.0217, +0.0229] smallest equivalence margin=0.0229 non-inferiority margin=0.0217
+  [F1] N-LDF - SMOTE        mean=+0.0044 90% CI=[-0.0217, +0.0225] smallest equivalence margin=0.0225 non-inferiority margin=0.0217
+  [F1] N-LDF - SMOTE-Tomek  mean=+0.0046 90% CI=[-0.0219, +0.0223] smallest equivalence margin=0.0223 non-inferiority margin=0.0219
+  [AUPRC] N-LDF - ADASYN       mean=+0.0245 90% CI=[+0.0010, +0.0424] smallest equivalence margin=0.0424 non-inferiority margin=0.0000
+  [AUPRC] N-LDF - B-SMOTE      mean=+0.0162 90% CI=[+0.0013, +0.0291] smallest equivalence margin=0.0291 non-inferiority margin=0.0000
+  [AUPRC] N-LDF - SMOTE        mean=+0.0152 90% CI=[-0.0029, +0.0308] smallest equivalence margin=0.0308 non-inferiority margin=0.0029
+  [AUPRC] N-LDF - SMOTE-Tomek  mean=+0.0155 90% CI=[-0.0022, +0.0307] smallest equivalence margin=0.0307 non-inferiority margin=0.0022
+
+==============================================================================
+F. Fit slots that raised exceptions; sampler fallbacks
+==============================================================================
+  missing slots: 25 across 17 datasets
+                       Dataset      Method Classifier  Repeat  Fold
+          abalone-20_vs_8-9-10    Baseline SVM-Linear       1     1
+          abalone-20_vs_8-9-10       N-LDF         RF       1     4
+                   abalone9-18     B-SMOTE    SVM-RBF       2     0
+          ecoli-0-1-3-7_vs_2-6       SMOTE    SVM-RBF       2     0
+                        ecoli4     B-SMOTE    SVM-RBF       0     3
+                        glass4      ADASYN    XGBoost       1     1
+                        glass4       SMOTE SVM-Linear       4     2
+                        glass5      ADASYN    XGBoost       2     2
+                         iris0      ADASYN    XGBoost       1     2
+                         iris0     B-SMOTE    XGBoost       1     3
+kddcup-buffer_overflow_vs_back    Baseline SVM-Linear       0     1
+kddcup-buffer_overflow_vs_back       SMOTE    XGBoost       1     3
+   kddcup-rootkit-imap_vs_back      ADASYN         RF       1     3
+                          pima     B-SMOTE SVM-Linear       0     4
+                          pima SMOTE-Tomek SVM-Linear       3     2
+                poker-8-9_vs_5       SMOTE         RF       0     1
+                poker-8-9_vs_6    Baseline         RF       1     4
+                poker-8-9_vs_6 SMOTE-Tomek SVM-Linear       3     3
+                        vowel0       N-LDF    XGBoost       1     1
+      winequality-white-3_vs_7     B-SMOTE SVM-Linear       2     1
+                  yeast-2_vs_8     B-SMOTE    SVM-RBF       0     0
+                        yeast5     B-SMOTE         RF       1     4
+                        yeast6     B-SMOTE         RF       2     3
+                        yeast6       SMOTE SVM-Linear       2     2
+                        yeast6 SMOTE-Tomek         RF       3     3
+
+  sampler fallbacks: 124 fits = 31 resampling calls, methods ['ADASYN'], to ['SMOTE']; by dataset {'iris0': 5, 'kddcup-land_vs_portsweep': 1, 'shuttle-2_vs_5': 25}
+  library message: Not any neigbours belong to the majority class. This case will induce a NaN case with a division by zero. ADASYN is not suited for this specific dataset. Use SMOTE instead.
+
+==============================================================================
+G. Severity means with source-cluster bootstrap 95% intervals (Figure 4)
+==============================================================================
+Severity      Method  n_tasks  n_sources     mean    ci_lo    ci_hi
+    Mild    Baseline       10          8 0.670687 0.523671 0.809811
+    Mild      ADASYN       10          8 0.722920 0.616548 0.833172
+    Mild     B-SMOTE       10          8 0.722206 0.616654 0.832001
+    Mild       SMOTE       10          8 0.728921 0.620149 0.840042
+    Mild SMOTE-Tomek       10          8 0.730573 0.623902 0.839057
+    Mild       N-LDF       10          8 0.718142 0.602874 0.835580
+    High    Baseline       12          5 0.459935 0.350396 0.693698
+    High      ADASYN       12          5 0.524030 0.404368 0.763450
+    High     B-SMOTE       12          5 0.545280 0.421003 0.773643
+    High       SMOTE       12          5 0.552270 0.443549 0.765523
+    High SMOTE-Tomek       12          5 0.550778 0.442287 0.762451
+    High       N-LDF       12          5 0.585736 0.486894 0.784819
+ Extreme    Baseline       19          7 0.422531 0.139355 0.790031
+ Extreme      ADASYN       19          7 0.512570 0.244527 0.850680
+ Extreme     B-SMOTE       19          7 0.525386 0.274163 0.842961
+ Extreme       SMOTE       19          7 0.514238 0.247262 0.858772
+ Extreme SMOTE-Tomek       19          7 0.513973 0.252153 0.854587
+ Extreme       N-LDF       19          7 0.508268 0.249249 0.848518
+
+written: results/supplementary
+
+==============================================================================
+CHECK against manuscript values
+==============================================================================
+  ok  auprc_friedman_all_p                 paper=0.0027       computed=0.002742
+  ok  auprc_friedman_os_p                  paper=0.000504     computed=0.000504201
+  ok  auprc_nldf_vs_baseline_holm          paper=0.0625       computed=0.0625197
+  ok  auprc_nldf_vs_smote_holm             paper=0.1258       computed=0.125751
+  ok  auprc_nldf_vs_bsmote_holm            paper=0.0138       computed=0.0137811
+  ok  auprc_nldf_vs_adasyn_holm            paper=0.0749       computed=0.074878
+  ok  auprc_nldf_vs_tomek_holm             paper=0.1258       computed=0.125751
+  ok  auc_friedman_all_p                   paper=0.000409     computed=0.000408978
+  ok  auc_nldf_vs_baseline_holm            paper=0.0084       computed=0.00835199
+  ok  auc_nldf_vs_smote_holm               paper=0.1407       computed=0.140695
+  ok  recall_baseline_mean                 paper=0.4583       computed=0.458342
+  ok  specificity_baseline_mean            paper=0.9834       computed=0.983417
+  ok  source_block_nldf_vs_baseline_p      paper=0.0169       computed=0.0168981
+  ok  mixed_nldf_vs_baseline_p             paper=1.78e-12     computed=1.77605e-12
+  ok  mixed_min_oversampler_p              paper=0.2332       computed=0.233165
+  ok  factor_rejections_extreme_pct        paper=0.83         computed=0.82776
+  ok  distance_rejections_chess_share      paper=0.9959       computed=0.995875
+  ok  sens_chess_friedman_os_p             paper=0.6587       computed=0.65875
+  ok  sens_chess_nldf_f1                   paper=0.5632       computed=0.563188
+  ok  failed_slots                         paper=25           computed=25
+  ok  failed_datasets                      paper=17           computed=17
+  ok  adasyn_fallback_calls                paper=31           computed=31
+  ok  adasyn_fallback_fits                 paper=124          computed=124
+  ok  rf_vs_smote_holm20                   paper=0.0263       computed=0.0263151
+  ok  svml_vs_adasyn_holm20                paper=0.0144       computed=0.0143702
+  ok  rf_vs_smote_source_holm20            paper=0.0921       computed=0.0920739
+  ok  svml_vs_adasyn_source_holm20         paper=1.0          computed=1
+  ok  interaction_smote_source_holm4       paper=0.0173       computed=0.0173306
+  ok  interaction_smote_contrast           paper=-0.0593      computed=-0.0592549
+  ok  interaction_global_lrt_p             paper=0.367        computed=0.366851
+  ok  clrobust_f1_baseline_p               paper=7.31e-05     computed=7.31313e-05
+  ok  clrobust_f1_min_oversampler_p        paper=0.446        computed=0.445512
+  ok  clrobust_auprc_baseline_p            paper=0.0664       computed=0.0663968
+  ok  random_slope_auprc_baseline_p        paper=0.407        computed=0.407179
+  ok  random_slope_auprc_adasyn_p          paper=0.0384       computed=0.0383851
+  ok  interaction_smote_holm24             paper=0.1329       computed=0.132868
+  ok  interaction_adasyn_holm24            paper=0.0973       computed=0.0972718
+  ok  interaction_tomek_holm24             paper=0.2793       computed=0.279303
+  ok  equiv_f1_smote_margin                paper=0.0225       computed=0.0225384
+  ok  equiv_f1_adasyn_margin               paper=0.0402       computed=0.0402395
+  ok  equiv_f1_max_noninferiority_margin   paper=0.0219       computed=0.0219274
+
+all checks passed

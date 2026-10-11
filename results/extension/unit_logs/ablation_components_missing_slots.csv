@@ -1,0 +1,13 @@
+Dataset,Method,Classifier,Repeat,Fold,cache_dir
+abalone-20_vs_8-9-10,ABL-nojitter,XGBoost,1,3,/home/claude/work/repo/keel_cache
+abalone-20_vs_8-9-10,ABL-nosupport,XGBoost,1,3,/home/claude/work/repo/keel_cache
+glass1,ABL-noratio,SVM-RBF,0,1,/home/claude/work/repo/keel_cache
+glass1,ABL-noratio,SVM-Linear,1,2,/home/claude/work/repo/keel_cache
+glass4,ABL-nojitter,SVM-RBF,2,0,/home/claude/work/repo/keel_cache
+glass4,ABL-nojitter,SVM-Linear,3,1,/home/claude/work/repo/keel_cache
+poker-8-9_vs_5,ABL-nodist,SVM-RBF,1,4,/home/claude/work/repo/keel_cache
+poker-8-9_vs_5,ABL-nojitter,SVM-RBF,1,4,/home/claude/work/repo/keel_cache
+winequality-white-3_vs_7,ABL-noratio,RF,0,0,/home/claude/work/repo/keel_cache
+winequality-white-3_vs_7,ABL-nosupport,RF,0,0,/home/claude/work/repo/keel_cache
+yeast4,ABL-nodist,SVM-RBF,1,2,/home/claude/work/repo/keel_cache
+yeast4,ABL-nojitter,SVM-RBF,1,2,/home/claude/work/repo/keel_cache

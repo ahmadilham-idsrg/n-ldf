@@ -1,0 +1,5 @@
+Dataset,Method,records,max_abs_diff
+kr-vs-k-zero_vs_eight,ADASYN,40,3.0
+kr-vs-k-zero_vs_fifteen,ADASYN,40,4.0
+kr-vs-k-zero_vs_fifteen,N-LDF,40,1.0
+segment0,N-LDF,100,0.0

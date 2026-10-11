@@ -1,0 +1,35 @@
+{
+ "note": "one N-LDF call on abalone19 (repeat 0, fold 0), released implementation vs memoised neighbour index (nn_cache.py); identical output (result_sha256)",
+ "without_index": {
+  "cached": false,
+  "task": "abalone19",
+  "split": "repeat 0, fold 0",
+  "n_train": 3339,
+  "N-LDF": {
+   "seconds": 26.12,
+   "n_generated": 2458,
+   "result_sha256": "5799aea040d4ea35"
+  },
+  "N-LDF-r1.0": {
+   "seconds": 34.48,
+   "n_generated": 3287,
+   "result_sha256": "1a3600fb01968cef"
+  }
+ },
+ "with_index": {
+  "cached": true,
+  "task": "abalone19",
+  "split": "repeat 0, fold 0",
+  "n_train": 3339,
+  "N-LDF": {
+   "seconds": 10.83,
+   "n_generated": 2458,
+   "result_sha256": "5799aea040d4ea35"
+  },
+  "N-LDF-r1.0": {
+   "seconds": 16.11,
+   "n_generated": 3287,
+   "result_sha256": "1a3600fb01968cef"
+  }
+ }
+}

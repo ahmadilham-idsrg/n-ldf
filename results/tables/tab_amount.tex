@@ -1,0 +1,29 @@
+\begin{table}[htbp]
+\caption{Resampling amount within each mechanism: mean F1 at $r=0.75$ and at
+parity, and the change from $r=0.75$ to parity in F1, recall, specificity,
+and AUPRC}
+\label{tab:amount}
+\centering
+\tabsmall
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{lccccccc}
+\toprule
+\textbf{Mechanism} & \hd{\textbf{F1}}{$r=0.75$} & \hd{\textbf{F1}}{parity} & \hd{$\Delta$\textbf{F1}}{} & \hd{\textbf{Source}}{\textbf{Holm $p$}} & \hd{$\Delta$\textbf{Rec.}}{} & \hd{$\Delta$\textbf{Spec.}}{} & \hd{$\Delta$\textbf{AUPRC}}{} \\
+\midrule
+ROS & 0.5635 & 0.5599 & $-0.0035$ & 1.00 & $+0.019$ & $-0.017$ & $-0.0041$ \\
+SMOTE & 0.5841 & 0.5777 & $-0.0063$ & 1.00 & $+0.019$ & $-0.017$ & $-0.0069$ \\
+Borderline-SMOTE & 0.5815 & 0.5792 & $-0.0022$ & 1.00 & $+0.018$ & $-0.016$ & $-0.0063$ \\
+ADASYN & 0.5710 & 0.5672 & $-0.0037$ & 1.00 & $+0.022$ & $-0.021$ & $-0.0057$ \\
+SMOTE-Tomek & 0.5841 & 0.5776 & $-0.0066$ & 1.00 & $+0.018$ & $-0.017$ & $-0.0062$ \\
+Safe-Level-SMOTE & 0.5652 & 0.5599 & $-0.0052$ & 1.00 & $+0.022$ & $-0.018$ & $-0.0057$ \\
+SVM-SMOTE & 0.5943 & 0.5901 & $-0.0042$ & 1.00 & $+0.014$ & $-0.009$ & $-0.0039$ \\
+k-means SMOTE & 0.5809 & 0.5756 & $-0.0053$ & 0.96 & $+0.012$ & $-0.012$ & $-0.0055$ \\
+N-LDF & 0.5821 & 0.5823 & $+0.0002$ & 1.00 & $+0.008$ & $-0.006$ & $-0.0035$ \\
+\bottomrule
+\end{tabular}
+\footnotetext{Means over the 41 tasks. $\Delta$ is parity minus $r=0.75$ for
+the same mechanism, averaged over tasks. Holm correction is over the nine
+mechanisms, with one block per source. N-LDF realizes
+its target on the 39 non-chess tasks and almost no augmentation on the two
+chess tasks at either target}
+\end{table}

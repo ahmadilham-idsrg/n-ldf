@@ -1,0 +1,4 @@
+Severity,n_generated,n_accepted,acceptance_rate,delta,IR,eta_mean,sampling_ratio,achieved_ratio,n_attempted,target_shortfall
+Extreme,933.1055,933.1055,0.9109,0.9081,65.8811,-0.022,0.75,0.711,1251.7493,55.7573
+High,380.5088,380.5088,0.9965,0.7096,21.5277,0.3143,0.75,0.7486,382.2035,0.0
+Mild,249.86,249.86,0.9905,0.5133,3.6763,0.4664,0.75,0.7493,253.652,0.0

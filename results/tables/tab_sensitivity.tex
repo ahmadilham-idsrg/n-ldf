@@ -1,0 +1,26 @@
+\begin{table}[htbp]
+\caption{Parameter sensitivity: one value moved from the archived setting}
+\label{tab:param_sensitivity}
+\centering
+\tabsmall
+\setlength{\tabcolsep}{1.6pt}
+\begin{tabular}{lcccccccc}
+\toprule
+\textbf{Variant} & \textbf{F1} & \hd{$\Delta$\textbf{F1}}{} & \hd{\textbf{Source}}{\textbf{Holm $p$}} & \hd{\textbf{Task}}{\textbf{Holm $p$}} & \hd{$\Delta$\textbf{Rec.}}{} & \hd{$\Delta$\textbf{Spec.}}{} & \hd{$\Delta$\textbf{AUPRC}}{} & \hd{\textbf{Realized}}{\textbf{ratio}} \\
+\midrule
+\textit{N-LDF (archived)} & 0.5821 & & & & & & & 0.714 \\
+$\lambda_p=0.5$ & 0.5780 & $-0.0042$ & 0.08 & 0.51 & $-0.009$ & $+0.002$ & $-0.0015$ & 0.714 \\
+$\lambda_p=0.9$ & 0.5817 & $-0.0004$ & 1.00 & 1.00 & $+0.003$ & $-0.001$ & $-0.0010$ & 0.714 \\
+$k_d=5$ & 0.5840 & $+0.0019$ & 1.00 & 0.50 & $+0.000$ & $+0.001$ & $+0.0014$ & 0.714 \\
+$k_d=11$ & 0.5813 & $-0.0008$ & 0.66 & 1.00 & $-0.002$ & $+0.000$ & $+0.0002$ & 0.714 \\
+threshold $-0.1$ & 0.5823 & $+0.0001$ & 0.24 & 0.41 & $+0.000$ & $+0.000$ & $-0.0000$ & 0.714 \\
+threshold $+0.1$ & 0.5822 & $+0.0001$ & 1.00 & 1.00 & $+0.000$ & $-0.000$ & $-0.0000$ & 0.714 \\
+ratio bound $2.0$ & 0.5817 & $-0.0004$ & 0.77 & 1.00 & $+0.000$ & $-0.000$ & $-0.0001$ & 0.714 \\
+\bottomrule
+\end{tabular}
+\footnotetext{$\Delta$ is the variant minus archived N-LDF, averaged over the 41
+tasks. Holm correction is over the variants of the family. Realized ratio is
+the minority--majority ratio after resampling, averaged within task and then
+over tasks (target $0.75$; the two chess tasks, with almost no augmentation,
+pull the mean below the target)}
+\end{table}

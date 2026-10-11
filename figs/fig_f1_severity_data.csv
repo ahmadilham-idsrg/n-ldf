@@ -1,0 +1,19 @@
+Severity,Method,Label,n,n_sources,Mean,CI_low,CI_high,n_boot,seed,resampling_unit
+Mild,Baseline,No resampling,10,8,0.670687,0.523671,0.809811,10000,42,source dataset
+Mild,SMOTE,SMOTE,10,8,0.728921,0.618819,0.837782,10000,42,source dataset
+Mild,ADASYN,ADASYN,10,8,0.72292,0.616546,0.834028,10000,42,source dataset
+Mild,B-SMOTE,Borderline-SMOTE,10,8,0.722206,0.618046,0.832381,10000,42,source dataset
+Mild,SMOTE-Tomek,SMOTE-Tomek,10,8,0.730573,0.623902,0.839057,10000,42,source dataset
+Mild,N-LDF,N-LDF,10,8,0.718142,0.602874,0.83558,10000,42,source dataset
+High,Baseline,No resampling,12,5,0.459935,0.350396,0.693698,10000,42,source dataset
+High,SMOTE,SMOTE,12,5,0.55227,0.443405,0.766025,10000,42,source dataset
+High,ADASYN,ADASYN,12,5,0.52403,0.404368,0.758955,10000,42,source dataset
+High,B-SMOTE,Borderline-SMOTE,12,5,0.54528,0.421003,0.772778,10000,42,source dataset
+High,SMOTE-Tomek,SMOTE-Tomek,12,5,0.550778,0.442287,0.762451,10000,42,source dataset
+High,N-LDF,N-LDF,12,5,0.585736,0.486894,0.784819,10000,42,source dataset
+Extreme,Baseline,No resampling,19,7,0.422531,0.139355,0.790031,10000,42,source dataset
+Extreme,SMOTE,SMOTE,19,7,0.514238,0.248187,0.8494,10000,42,source dataset
+Extreme,ADASYN,ADASYN,19,7,0.51257,0.244375,0.843681,10000,42,source dataset
+Extreme,B-SMOTE,Borderline-SMOTE,19,7,0.525386,0.272388,0.854395,10000,42,source dataset
+Extreme,SMOTE-Tomek,SMOTE-Tomek,19,7,0.513973,0.252153,0.854587,10000,42,source dataset
+Extreme,N-LDF,N-LDF,19,7,0.508268,0.249249,0.848518,10000,42,source dataset

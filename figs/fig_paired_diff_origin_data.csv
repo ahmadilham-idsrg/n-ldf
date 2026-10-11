@@ -1,0 +1,206 @@
+Comparison,Dataset,Diff_F1,Outcome
+ADASYN,abalone-19_vs_10-11-12-13,-0.028715,Loss
+ADASYN,abalone-20_vs_8-9-10,0.020646,Win
+ADASYN,abalone-21_vs_8,0.076826,Win
+ADASYN,abalone19,-0.037136,Loss
+ADASYN,abalone9-18,0.020576,Win
+ADASYN,ecoli-0-1-3-7_vs_2-6,0.133767,Win
+ADASYN,ecoli1,0.011196,Win
+ADASYN,ecoli2,0.052404,Win
+ADASYN,ecoli4,0.067304,Win
+ADASYN,glass1,-0.021341,Loss
+ADASYN,glass4,-0.00552,Loss
+ADASYN,glass5,-0.015788,Loss
+ADASYN,haberman,-0.030366,Loss
+ADASYN,iris0,2.4e-05,Win
+ADASYN,kddcup-buffer_overflow_vs_back,0.006469,Win
+ADASYN,kddcup-land_vs_portsweep,-0.000162,Loss
+ADASYN,kddcup-land_vs_satan,0.005208,Win
+ADASYN,kddcup-rootkit-imap_vs_back,-0.00947,Loss
+ADASYN,kr-vs-k-zero_vs_eight,-0.039705,Loss
+ADASYN,kr-vs-k-zero_vs_fifteen,0.0,Tie
+ADASYN,pima,-0.032023,Loss
+ADASYN,poker-8-9_vs_5,-0.045207,Loss
+ADASYN,poker-8-9_vs_6,-0.101385,Loss
+ADASYN,poker-8_vs_6,-0.235595,Loss
+ADASYN,segment0,0.010011,Win
+ADASYN,shuttle-2_vs_5,0.0,Tie
+ADASYN,vehicle1,-0.049251,Loss
+ADASYN,vowel0,-0.002198,Loss
+ADASYN,winequality-red-3_vs_5,0.019907,Win
+ADASYN,winequality-red-8_vs_6-7,-0.029966,Loss
+ADASYN,winequality-white-3-9_vs_5,0.068526,Win
+ADASYN,winequality-white-3_vs_7,0.118414,Win
+ADASYN,yeast-1-2-8-9_vs_7,0.097147,Win
+ADASYN,yeast-1-4-5-8_vs_7,-0.036044,Loss
+ADASYN,yeast-2_vs_4,0.062423,Win
+ADASYN,yeast-2_vs_8,0.391415,Win
+ADASYN,yeast1,-0.029606,Loss
+ADASYN,yeast3,0.041176,Win
+ADASYN,yeast4,0.043009,Win
+ADASYN,yeast5,-0.015627,Loss
+ADASYN,yeast6,0.129603,Win
+Borderline-SMOTE,abalone-19_vs_10-11-12-13,-0.023148,Loss
+Borderline-SMOTE,abalone-20_vs_8-9-10,-0.01826,Loss
+Borderline-SMOTE,abalone-21_vs_8,-0.012857,Loss
+Borderline-SMOTE,abalone19,-0.02032,Loss
+Borderline-SMOTE,abalone9-18,0.018822,Win
+Borderline-SMOTE,ecoli-0-1-3-7_vs_2-6,0.043175,Win
+Borderline-SMOTE,ecoli1,0.009487,Win
+Borderline-SMOTE,ecoli2,0.060807,Win
+Borderline-SMOTE,ecoli4,0.049667,Win
+Borderline-SMOTE,glass1,-0.011659,Loss
+Borderline-SMOTE,glass4,-0.035105,Loss
+Borderline-SMOTE,glass5,-0.039524,Loss
+Borderline-SMOTE,haberman,-0.033894,Loss
+Borderline-SMOTE,iris0,2.4e-05,Win
+Borderline-SMOTE,kddcup-buffer_overflow_vs_back,0.006469,Win
+Borderline-SMOTE,kddcup-land_vs_portsweep,0.005519,Win
+Borderline-SMOTE,kddcup-land_vs_satan,0.014931,Win
+Borderline-SMOTE,kddcup-rootkit-imap_vs_back,-0.007382,Loss
+Borderline-SMOTE,kr-vs-k-zero_vs_eight,-0.034308,Loss
+Borderline-SMOTE,kr-vs-k-zero_vs_fifteen,0.0,Tie
+Borderline-SMOTE,pima,-0.030374,Loss
+Borderline-SMOTE,poker-8-9_vs_5,-0.030804,Loss
+Borderline-SMOTE,poker-8-9_vs_6,-0.049376,Loss
+Borderline-SMOTE,poker-8_vs_6,-0.143837,Loss
+Borderline-SMOTE,segment0,0.009963,Win
+Borderline-SMOTE,shuttle-2_vs_5,0.0,Tie
+Borderline-SMOTE,vehicle1,-0.048607,Loss
+Borderline-SMOTE,vowel0,-0.002452,Loss
+Borderline-SMOTE,winequality-red-3_vs_5,-0.001182,Loss
+Borderline-SMOTE,winequality-red-8_vs_6-7,-0.013374,Loss
+Borderline-SMOTE,winequality-white-3-9_vs_5,-0.039005,Loss
+Borderline-SMOTE,winequality-white-3_vs_7,0.008156,Win
+Borderline-SMOTE,yeast-1-2-8-9_vs_7,0.058156,Win
+Borderline-SMOTE,yeast-1-4-5-8_vs_7,-0.042035,Loss
+Borderline-SMOTE,yeast-2_vs_4,0.067958,Win
+Borderline-SMOTE,yeast-2_vs_8,0.364794,Win
+Borderline-SMOTE,yeast1,-0.029079,Loss
+Borderline-SMOTE,yeast3,0.03269,Win
+Borderline-SMOTE,yeast4,0.007099,Win
+Borderline-SMOTE,yeast5,-0.005086,Loss
+Borderline-SMOTE,yeast6,0.033536,Win
+SMOTE,abalone-19_vs_10-11-12-13,-0.036313,Loss
+SMOTE,abalone-20_vs_8-9-10,0.024362,Win
+SMOTE,abalone-21_vs_8,0.045889,Win
+SMOTE,abalone19,-0.033944,Loss
+SMOTE,abalone9-18,0.010874,Win
+SMOTE,ecoli-0-1-3-7_vs_2-6,0.127131,Win
+SMOTE,ecoli1,0.003819,Win
+SMOTE,ecoli2,0.007919,Win
+SMOTE,ecoli4,0.020796,Win
+SMOTE,glass1,-0.007516,Loss
+SMOTE,glass4,-0.021419,Loss
+SMOTE,glass5,-0.029077,Loss
+SMOTE,haberman,-0.032855,Loss
+SMOTE,iris0,0.0,Tie
+SMOTE,kddcup-buffer_overflow_vs_back,0.008723,Win
+SMOTE,kddcup-land_vs_portsweep,-0.000162,Loss
+SMOTE,kddcup-land_vs_satan,0.005208,Win
+SMOTE,kddcup-rootkit-imap_vs_back,-0.004541,Loss
+SMOTE,kr-vs-k-zero_vs_eight,-0.036647,Loss
+SMOTE,kr-vs-k-zero_vs_fifteen,0.0,Tie
+SMOTE,pima,-0.028015,Loss
+SMOTE,poker-8-9_vs_5,-0.056495,Loss
+SMOTE,poker-8-9_vs_6,-0.079845,Loss
+SMOTE,poker-8_vs_6,-0.221044,Loss
+SMOTE,segment0,-0.000926,Loss
+SMOTE,shuttle-2_vs_5,0.0,Tie
+SMOTE,vehicle1,-0.043574,Loss
+SMOTE,vowel0,0.005615,Win
+SMOTE,winequality-red-3_vs_5,0.022446,Win
+SMOTE,winequality-red-8_vs_6-7,-0.02184,Loss
+SMOTE,winequality-white-3-9_vs_5,0.063941,Win
+SMOTE,winequality-white-3_vs_7,0.128227,Win
+SMOTE,yeast-1-2-8-9_vs_7,0.077484,Win
+SMOTE,yeast-1-4-5-8_vs_7,-0.028868,Loss
+SMOTE,yeast-2_vs_4,0.028278,Win
+SMOTE,yeast-2_vs_8,0.196881,Win
+SMOTE,yeast1,-0.030175,Loss
+SMOTE,yeast3,0.023534,Win
+SMOTE,yeast4,0.031014,Win
+SMOTE,yeast5,-0.017117,Loss
+SMOTE,yeast6,0.078588,Win
+SMOTE-Tomek,abalone-19_vs_10-11-12-13,-0.035716,Loss
+SMOTE-Tomek,abalone-20_vs_8-9-10,0.020037,Win
+SMOTE-Tomek,abalone-21_vs_8,0.047662,Win
+SMOTE-Tomek,abalone19,-0.029586,Loss
+SMOTE-Tomek,abalone9-18,0.020435,Win
+SMOTE-Tomek,ecoli-0-1-3-7_vs_2-6,0.114799,Win
+SMOTE-Tomek,ecoli1,0.001057,Win
+SMOTE-Tomek,ecoli2,0.003759,Win
+SMOTE-Tomek,ecoli4,0.028544,Win
+SMOTE-Tomek,glass1,-0.010722,Loss
+SMOTE-Tomek,glass4,-0.006304,Loss
+SMOTE-Tomek,glass5,-0.034226,Loss
+SMOTE-Tomek,haberman,-0.038365,Loss
+SMOTE-Tomek,iris0,0.0,Tie
+SMOTE-Tomek,kddcup-buffer_overflow_vs_back,0.008392,Win
+SMOTE-Tomek,kddcup-land_vs_portsweep,-0.000162,Loss
+SMOTE-Tomek,kddcup-land_vs_satan,0.005208,Win
+SMOTE-Tomek,kddcup-rootkit-imap_vs_back,-0.004541,Loss
+SMOTE-Tomek,kr-vs-k-zero_vs_eight,-0.03892,Loss
+SMOTE-Tomek,kr-vs-k-zero_vs_fifteen,0.0,Tie
+SMOTE-Tomek,pima,-0.025171,Loss
+SMOTE-Tomek,poker-8-9_vs_5,-0.050305,Loss
+SMOTE-Tomek,poker-8-9_vs_6,-0.086412,Loss
+SMOTE-Tomek,poker-8_vs_6,-0.216547,Loss
+SMOTE-Tomek,segment0,-0.000634,Loss
+SMOTE-Tomek,shuttle-2_vs_5,0.0,Tie
+SMOTE-Tomek,vehicle1,-0.044812,Loss
+SMOTE-Tomek,vowel0,0.006255,Win
+SMOTE-Tomek,winequality-red-3_vs_5,0.024518,Win
+SMOTE-Tomek,winequality-red-8_vs_6-7,-0.019502,Loss
+SMOTE-Tomek,winequality-white-3-9_vs_5,0.058959,Win
+SMOTE-Tomek,winequality-white-3_vs_7,0.128257,Win
+SMOTE-Tomek,yeast-1-2-8-9_vs_7,0.0829,Win
+SMOTE-Tomek,yeast-1-4-5-8_vs_7,-0.036151,Loss
+SMOTE-Tomek,yeast-2_vs_4,0.032501,Win
+SMOTE-Tomek,yeast-2_vs_8,0.200091,Win
+SMOTE-Tomek,yeast1,-0.031801,Loss
+SMOTE-Tomek,yeast3,0.022378,Win
+SMOTE-Tomek,yeast4,0.029474,Win
+SMOTE-Tomek,yeast5,-0.018821,Loss
+SMOTE-Tomek,yeast6,0.080254,Win
+No resampling,abalone-19_vs_10-11-12-13,0.058586,Win
+No resampling,abalone-20_vs_8-9-10,0.198207,Win
+No resampling,abalone-21_vs_8,0.070119,Win
+No resampling,abalone19,0.022499,Win
+No resampling,abalone9-18,0.176947,Win
+No resampling,ecoli-0-1-3-7_vs_2-6,0.153849,Win
+No resampling,ecoli1,0.003708,Win
+No resampling,ecoli2,0.027035,Win
+No resampling,ecoli4,0.020008,Win
+No resampling,glass1,0.139592,Win
+No resampling,glass4,0.18477,Win
+No resampling,glass5,0.313929,Win
+No resampling,haberman,0.150391,Win
+No resampling,iris0,0.0,Tie
+No resampling,kddcup-buffer_overflow_vs_back,0.070861,Win
+No resampling,kddcup-land_vs_portsweep,0.020213,Win
+No resampling,kddcup-land_vs_satan,0.014931,Win
+No resampling,kddcup-rootkit-imap_vs_back,0.061283,Win
+No resampling,kr-vs-k-zero_vs_eight,0.013194,Win
+No resampling,kr-vs-k-zero_vs_fifteen,0.0,Tie
+No resampling,pima,0.00647,Win
+No resampling,poker-8-9_vs_5,0.005308,Win
+No resampling,poker-8-9_vs_6,0.31521,Win
+No resampling,poker-8_vs_6,0.266755,Win
+No resampling,segment0,-0.000636,Loss
+No resampling,shuttle-2_vs_5,0.0,Tie
+No resampling,vehicle1,0.064607,Win
+No resampling,vowel0,-0.005579,Loss
+No resampling,winequality-red-3_vs_5,0.070492,Win
+No resampling,winequality-red-8_vs_6-7,0.026098,Win
+No resampling,winequality-white-3-9_vs_5,0.128944,Win
+No resampling,winequality-white-3_vs_7,0.103353,Win
+No resampling,yeast-1-2-8-9_vs_7,0.161378,Win
+No resampling,yeast-1-4-5-8_vs_7,0.090554,Win
+No resampling,yeast-2_vs_4,0.011726,Win
+No resampling,yeast-2_vs_8,0.085786,Win
+No resampling,yeast1,0.074236,Win
+No resampling,yeast3,0.00915,Win
+No resampling,yeast4,0.232539,Win
+No resampling,yeast5,0.083699,Win
+No resampling,yeast6,0.182947,Win

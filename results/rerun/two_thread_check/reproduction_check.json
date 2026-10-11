@@ -1,0 +1,43 @@
+{
+ "units": 4,
+ "records_rerun": 220,
+ "records_matched": 220,
+ "only_in_rerun": 0,
+ "only_in_archive": 0,
+ "metrics": {
+  "F1": {
+   "max_abs_diff": 0.0,
+   "n_differ": 0
+  },
+  "Precision": {
+   "max_abs_diff": 0.0,
+   "n_differ": 0
+  },
+  "Recall": {
+   "max_abs_diff": 0.0,
+   "n_differ": 0
+  },
+  "Specificity": {
+   "max_abs_diff": 0.0,
+   "n_differ": 0
+  },
+  "G-Mean": {
+   "max_abs_diff": 0.0,
+   "n_differ": 0
+  },
+  "AUC-ROC": {
+   "max_abs_diff": 2.220446049250313e-16,
+   "n_differ": 1
+  },
+  "AUPRC": {
+   "max_abs_diff": 2.220446049250313e-16,
+   "n_differ": 1
+  },
+  "NResampled": {
+   "max_abs_diff": 4.0,
+   "n_differ": 40
+  }
+ },
+ "values_identical_on_shared_records": false,
+ "exact": false
+}
