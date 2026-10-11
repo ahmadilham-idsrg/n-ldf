@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software or these records, please cite the accompanying
+  paper, "Amount, mechanism, and decision threshold in minority oversampling:
+  a controlled evaluation of class-size-normalized local support" (submitted
+  to Machine Learning). Until it is published, please cite this repository.
+title: "N-LDF: amount, mechanism and decision threshold in minority oversampling"
+abstract: >-
+  Implementation, experiment records and analysis code for a controlled
+  evaluation of minority oversampling. N-LDF is an oversampler built on a
+  bounded, class-size-normalized local-support statistic; the paper uses it
+  as a case for separating the effect of the oversampling mechanism from the
+  effect of the amount of synthetic data and of the decision threshold.
+  The repository holds the complete fold-level records of the benchmark
+  (41 KEEL tasks, six strategies, four classifiers, 21,911 fits), of the
+  controlled experiments on the same partitions (matched amounts,
+  threshold-tuned and class-weighted baselines, further oversamplers,
+  ablations and parameter sensitivity), of a held-out evaluation on 13 tasks
+  from 10 further sources under a protocol hashed before the run, and of a
+  re-run that reproduces the archived benchmark; one command regenerates
+  every table and figure of the paper from these records.
+type: software
+license: MIT
+version: 2.0.0
+date-released: "2026-10-10"
+repository-code: "https://github.com/ahmadilham-idsrg/n-ldf"
+keywords:
+  - class imbalance
+  - synthetic minority oversampling
+  - decision threshold
+  - resampling amount
+  - ablation
+  - benchmark evaluation
+  - SMOTE
+authors:
+  - family-names: Ilham
+    given-names: Ahmad
+    affiliation: "Department of Informatics, Universitas Muhammadiyah Semarang, Indonesia"
+  - family-names: "Mat Deris"
+    given-names: Mustafa
+    affiliation: "Universiti Muhammadiyah Malaysia (UMAM), Perlis, Malaysia"
+  - family-names: Dewi
+    given-names: "Deshinta Arrova"
+    affiliation: "INTI International University, Nilai, Malaysia"
