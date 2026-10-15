@@ -2,8 +2,8 @@
 
 Implementation, experiment records and analysis code for the paper
 
-> **N-LDF: A Controlled Evaluation of Class-Size-Normalized Local Support Across Oversampling Amounts, Mechanisms, and Decision Thresholds** (submitted to *Machine Learning* https://link.springer.com/journal/10994 )
-> Ahmad Ilham, Mustafa Mat Deris, Deshinta Arrova Dewi
+> **Mechanism, Amount, or Threshold? Mechanism, Amount, or Threshold? A Controlled Evaluation of Minority Oversampling** (submitted to *Journal of Artificial Intelligence Research (JAIR)* https://jair.org/index.php/jair/index)
+> Ahmad Ilham, Deshinta Arrova Dewi, Laelatul Khikmah, Mustafa Mat Deris, and Mudyawati Kamaruddin
 
 Every number, table and figure in the paper is regenerated from the files in
 this repository by one command; nothing needs to be retrained.
